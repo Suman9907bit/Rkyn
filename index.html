@@ -1,119 +1,136 @@
-<!doctype html>
-<html lang="bn">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Radha Krishno — Booking</title>
-<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --card-bg: #ffffff;
-    --accent: #0b84ff;
-    --muted: #6b6b6b;
-    --radius: 14px;
-    --container-w: 420px;
-  }
-  *{box-sizing:border-box;font-family:'Baloo 2', cursive}
-  body{
-    margin:0;background:linear-gradient(180deg,#f3f8ff 0%, #fafafa 40%);min-height:100vh;
-    display:flex;align-items:center;justify-content:center;padding:32px;
-  }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shri Radha Krishno Yatri Nibas - Booking Form</title>
 
-  .card{
-    width:100%;max-width:var(--container-w);background:var(--card-bg);
-    border-radius:var(--radius);box-shadow:0 12px 30px rgba(12,20,40,0.08);
-    padding:22px;
-  }
+  <style>
+    body{
+      margin:0;
+      padding:0;
+      background:#f0f6ff;
+      font-family: "Segoe UI", Arial, sans-serif;
+    }
 
-  .head{
-    text-align:center;margin-bottom:10px;padding-bottom:8px;border-bottom:1px solid #f0f0f0;
-  }
-  .title{font-size:22px;color:#222;margin:6px 0;font-weight:700}
-  .subtitle{font-size:13px;color:var(--muted)}
+    .container{
+      max-width: 520px;
+      background:#ffffff;
+      padding:30px;
+      margin:40px auto;
+      border-radius:20px;
+      box-shadow:0 0 25px rgba(0, 102, 255, 0.15);
+      border-top:5px solid #0066ff;
+    }
 
-  form{margin-top:14px}
-  label{display:block;font-size:14px;margin:12px 0 6px;color:#111}
-  .input, textarea{
-    width:100%;padding:12px 14px;border-radius:8px;border:1px solid #e6e6e6;
-    font-size:15px;outline:none;background:#fcfcfd;transition:all .15s;
-    box-shadow:inset 0 1px 0 rgba(255,255,255,0.6);
-  }
-  .input:focus, textarea:focus{border-color:var(--accent);transform:translateY(-1px)}
-  textarea{min-height:84px;resize:vertical}
+    h2{
+      text-align:center;
+      color:#003f8c;
+      font-size:26px;
+      margin-bottom:5px;
+      font-weight:700;
+    }
 
-  .btn{
-    margin-top:16px;background:linear-gradient(90deg,var(--accent),#006fe6);color:#fff;
-    border:none;padding:14px;border-radius:10px;width:100%;font-size:16px;cursor:pointer;
-    box-shadow:0 8px 18px rgba(11,132,255,0.18);
-  }
+    .address{
+      text-align:center;
+      color:#555;
+      font-size:14px;
+      margin-bottom:22px;
+    }
 
-  .footer-note{font-size:12px;color:#9a9a9a;text-align:center;margin-top:12px}
-</style>
+    label{
+      font-weight:600;
+      color:#003f8c;
+      margin-top:15px;
+      display:block;
+      font-size:15px;
+    }
+
+    input{
+      width:100%;
+      padding:11px;
+      margin-top:6px;
+      border-radius:8px;
+      border:1px solid #bcd3ff;
+      font-size:15px;
+      outline:none;
+      transition:0.3s;
+    }
+
+    input:focus{
+      border-color:#0066ff;
+      box-shadow:0 0 5px rgba(0, 102, 255, 0.3);
+    }
+
+    button{
+      width:100%;
+      background:#0066ff;
+      padding:13px;
+      border:none;
+      border-radius:10px;
+      color:white;
+      font-size:17px;
+      font-weight:600;
+      margin-top:25px;
+      cursor:pointer;
+      transition:0.3s;
+    }
+
+    button:hover{
+      background:#004ec2;
+      transform:scale(1.02);
+    }
+
+    /* ------- RESPONSIVE DESIGN ------- */
+
+    @media (min-width: 900px){
+      .container{
+        max-width: 700px;
+        padding:40px 60px;
+      }
+      h2{ font-size:32px; }
+      input, button{ font-size:18px; }
+    }
+
+  </style>
 </head>
+
 <body>
 
-<div class="card">
-  <div class="head">
-    <div class="title">Shri Radha Krishno Yatri Nibas Booking Form</div>
-    <div class="subtitle">Kakdwip, Lot No 8, Golpark, South 24 pgs, West Bengal - 743347</div>
+  <div class="container">
+    <h2>Shri Radha Krishno Yatri Nibas</h2>
+    <div class="address">
+      Kakdwip, Lot No. 8, Golpark, South 24 Pgs, West Bengal - 743347
+      <br>
+      <b>Email:</b> shriradhakrishnoyatrinibas@gmail.com
+    </div>
+
+    <form action="https://formsubmit.co/shriradhakrishnoyatrinibas@gmail.com" method="POST">
+      
+      <!-- Hidden Settings -->
+      <input type="hidden" name="_subject" value="New Booking Request - Shri Radha Krishno Yatri Nibas">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_autoresponse" value="Thank you for your booking request. We will contact you shortly.">
+
+      <label for="date">Date</label>
+      <input type="date" id="date" name="Date" required>
+
+      <label for="name">Name</label>
+      <input type="text" id="name" name="Name" placeholder="Enter your full name" required>
+
+      <label for="mobile">Mobile Number</label>
+      <input type="tel" id="mobile" name="Mobile Number" pattern="[0-9]{10}" placeholder="10-digit mobile number" required>
+
+      <label for="total">Total Jatri</label>
+      <input type="number" id="total" name="Total Jatri" min="1" required>
+
+      <label for="car">Car Number</label>
+      <input type="text" id="car" name="Car Number" placeholder="Optional">
+
+      <button type="submit">Submit Booking</button>
+    </form>
   </div>
-
-  <form id="bookingForm">
-    <label for="date">Date</label>
-    <input id="date" class="input" type="date" required>
-
-    <label for="name">Name</label>
-    <input id="name" class="input" type="text" placeholder="আপনার নাম" required>
-
-    <label for="mobile">Mobile No</label>
-    <input id="mobile" class="input" type="tel" pattern="[0-9]{10,15}" placeholder="মোবাইল নম্বর" required>
-
-    <label for="total">Total Jatri</label>
-    <input id="total" class="input" type="number" min="1" placeholder="মোট যাত্রী" required>
-
-    <label for="carno">Car No</label>
-    <input id="carno" class="input" type="text" placeholder="গাড়ির নম্বর (যদি থাকে)">
-
-    <label for="address">Address</label>
-    <textarea id="address" placeholder="ঠিকানা লিখুন..." required></textarea>
-
-    <button type="submit" class="btn">Submit Booking</button>
-
-    <div class="footer-note">Mail will be sent to: <strong>sj637989@gmail.com</strong></div>
-  </form>
-</div>
-
-<script>
-  const form = document.getElementById('bookingForm');
-
-  form.addEventListener('submit', function(evt){
-    evt.preventDefault();
-
-    const data = {
-      date: document.getElementById('date').value,
-      name: document.getElementById('name').value.trim(),
-      mobile: document.getElementById('mobile').value.trim(),
-      total: document.getElementById('total').value,
-      carno: document.getElementById('carno').value.trim(),
-      address: document.getElementById('address').value.trim()
-    };
-
-    const body = encodeURIComponent(
-      `New Booking Details\n`+
-      `---------------------------\n`+
-      `Date: ${data.date}\n`+
-      `Name: ${data.name}\n`+
-      `Mobile: ${data.mobile}\n`+
-      `Total Jatri: ${data.total}\n`+
-      `Car No: ${data.carno}\n`+
-      `Address:\n${data.address}\n`+
-      `---------------------------\n`
-    );
-
-    const mailto = `mailto:sj637989@gmail.com?subject=New Booking&body=${body}`;
-    window.location.href = mailto;
-  });
-</script>
 
 </body>
 </html>
