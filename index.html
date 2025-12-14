@@ -1,136 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Shri Radha Krishno Yatri Nibas - Booking Form</title>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Password Protected Page</title>
   <style>
-    body{
-      margin:0;
-      padding:0;
-      background:#f0f6ff;
-      font-family: "Segoe UI", Arial, sans-serif;
+    body {
+      margin: 0;
+      padding: 0;
+      background-image: url('https://img.freepik.com/premium-vector/blue-futuristic-circuit-game-data-technology_100956-223.jpg?semt=ais_hybrid&w=740&q=80');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+      min-height: 100vh;
+      font-family: Arial, sans-serif;
     }
-
-    .container{
-      max-width: 520px;
-      background:#ffffff;
-      padding:30px;
-      margin:40px auto;
-      border-radius:20px;
-      box-shadow:0 0 25px rgba(0, 102, 255, 0.15);
-      border-top:5px solid #0066ff;
+    .main {
+      color: yellow;
+      text-shadow: 1px 1px 0px blue;
+      margin: 0;
+      text-align: center;
     }
-
-    h2{
-      text-align:center;
-      color:#003f8c;
-      font-size:26px;
-      margin-bottom:5px;
-      font-weight:700;
+    .name {
+      font-size: 40px;
     }
-
-    .address{
-      text-align:center;
-      color:#555;
-      font-size:14px;
-      margin-bottom:22px;
+    #content {
+      display: none;
+      background-color: white;
+      width: 90%;
+      max-width: 500px;
+      border-radius: 10px;
+      padding: 20px;
     }
-
-    label{
-      font-weight:600;
-      color:#003f8c;
-      margin-top:15px;
-      display:block;
-      font-size:15px;
+    input[type="password"], input[type="number"], button {
+      padding: 10px;
+      font-size: 16px;
+      margin: 10px 0;
+      text-align: center;
+      width: 80%;
+      max-width: 300px;
+      border: 2px solid #f5f5f5;
+      border-radius: 5px;
     }
-
-    input{
-      width:100%;
-      padding:11px;
-      margin-top:6px;
-      border-radius:8px;
-      border:1px solid #bcd3ff;
-      font-size:15px;
-      outline:none;
-      transition:0.3s;
+    button {
+      background-color: #0a806a;
+      color: white;
+      cursor: pointer;
+      transition: 0.3s;
     }
-
-    input:focus{
-      border-color:#0066ff;
-      box-shadow:0 0 5px rgba(0, 102, 255, 0.3);
+    button:hover {
+      background-color: #055345;
     }
-
-    button{
-      width:100%;
-      background:#0066ff;
-      padding:13px;
-      border:none;
-      border-radius:10px;
-      color:white;
-      font-size:17px;
-      font-weight:600;
-      margin-top:25px;
-      cursor:pointer;
-      transition:0.3s;
+    .pass {
+      background-color:;
+      width: 70%;
+      max-width: 500px;
+      border: solid 2px no;
+      border-opacity:2px;
+      border-radius: no;
+      padding: 20px;
+      color: white;
     }
-
-    button:hover{
-      background:#004ec2;
-      transform:scale(1.02);
+    .succ {
+      color: #0a806a;
+      padding: 10px;
+      text-align: justify;
     }
-
-    /* ------- RESPONSIVE DESIGN ------- */
-
-    @media (min-width: 900px){
-      .container{
-        max-width: 700px;
-        padding:40px 60px;
-      }
-      h2{ font-size:32px; }
-      input, button{ font-size:18px; }
+    .visit {
+      color: white;
+      background-color: blue;
+      width: 80%;
+      padding: 10px;
+      border-radius: 5px;
+      font-size: 20px;
+      cursor: pointer;
+      margin: 10px auto;
+      text-align: center;
     }
-
+    .cancel {
+      color: white;
+      background-color: red;
+      width: 40%;
+      padding: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      text-align: center;
+      margin: 15px auto;
+    }
+    .a {
+      text-decoration: none;
+    }
+    @media (max-width: 600px) {
+      .name { font-size: 28px; }
+      .visit { font-size: 18px; }
+    }
   </style>
 </head>
-
 <body>
-
-  <div class="container">
-    <h2>Shri Radha Krishno Yatri Nibas</h2>
-    <div class="address">
-      Kakdwip, Lot No. 8, Golpark, South 24 Pgs, West Bengal - 743347
-      <br>
-      <b>Email:</b> shriradhakrishnoyatrinibas@gmail.com
-    </div>
-
-    <form action="https://formsubmit.co/shriradhakrishnoyatrinibas@gmail.com" method="POST">
-      
-      <!-- Hidden Settings -->
-      <input type="hidden" name="_subject" value="New Booking Request - Shri Radha Krishno Yatri Nibas">
-      <input type="hidden" name="_template" value="table">
-      <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_autoresponse" value="Thank you for your booking request. We will contact you shortly.">
-
-      <label for="date">Date</label>
-      <input type="date" id="date" name="Date" required>
-
-      <label for="name">Name</label>
-      <input type="text" id="name" name="Name" placeholder="Enter your full name" required>
-
-      <label for="mobile">Mobile Number</label>
-      <input type="tel" id="mobile" name="Mobile Number" pattern="[0-9]{10}" placeholder="10-digit mobile number" required>
-
-      <label for="total">Total Jatri</label>
-      <input type="number" id="total" name="Total Jatri" min="1" required>
-
-      <label for="car">Car Number</label>
-      <input type="text" id="car" name="Car Number" placeholder="Optional">
-
-      <button type="submit">Submit Booking</button>
-    </form>
+  <div class="main">
+    <p class="name">Tara ma jatri nibas</p>
   </div>
+  <p style="color:white;text-align:center;font-size:18px;margin-top:-15px;">
+    Online Web-work
+  </p>
 
+  <center>
+<br></>
+    <div class="pass">
+      <img src="https://cdn-icons-png.flaticon.com/512/295/295128.png" width="100" height="100"
+        style="border-radius:100px; border:solid white 2px">
+      <h1>Login</h1>
+      <p>Log in to go to the main website.</p>
+      <div id="login">
+        <input type="number" id="userid" placeholder="Enter Your ID" required><br>
+        <input type="password" id="password" placeholder="Enter Password" required><br>
+        <button onclick="checkLogin()">Submit</button>
+      </div>
+
+      <div id="content">
+        <img src="https://cdn-icons-gif.flaticon.com/17702/17702130.gif" height="100px">
+        <h2 style="color:green;">Successfully Logged In</h2>
+        <p class="succ">Thank you very much for logging in to the page. Click Visit Now to go to my website.</p>
+
+        <a href="https://hotelinfo.wb.gov.in/bifm/login.asp" target="_blank" class="a">
+          <div class="visit">Hotel Data Entry</div>
+        </a>
+
+        <a href="https://suman9907bit.github.io/Jana-online-service-/" target="_blank" class="a">
+          <div class="visit">Documents Verification</div>
+        </a>
+
+        <a href="https://suman9907bit.github.io/Jana-online-service-/" target="_blank" class="a">
+          <div class="visit">Other Service</div>
+        </a>
+
+        <a href="#" class="a">
+          <div class="cancel" onclick="location.reload()">Cancel</div>
+        </a>
+      </div>
+    </div>
+  </center>
+
+  <script>
+    function checkLogin() {
+      const userId = document.getElementById("userid").value;
+      const password = document.getElementById("password").value;
+
+      // এখানে multi-user ID এবং Password লিস্ট
+      const users = [
+     
+        { id: "11111", pass: "2222" }
+      ];
+
+      const matchedUser = users.find(user => user.id === userId && user.pass === password);
+
+      if (matchedUser) {
+        document.getElementById("content").style.display = "block";
+        document.getElementById("login").style.display = "none";
+      } else {
+        alert("Wrong ID or Password!");
+        document.getElementById("password").value = "";
+      }
+    }
+  </script>
+
+  <br>
+  <center>
+    <div style="background-color:rgba(0,0,0,0.4);width:90%;border-radius:10px;border:2px solid #146b8a;padding:10px;">
+      <marquee style="background-color:rgba(0,0,0,0.6);width:95%;color:white;border-radius:10px;height:30px;line-height:30px;">
+        📢 নোটিশ: সাইটটিতে লগইন করতে হলে অনুমোদিত ID এবং Password থাকা আবশ্যক। Only for owner use.
+      </marquee>
+    </div>
+  </center>
 </body>
 </html>
